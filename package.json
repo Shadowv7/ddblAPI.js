@@ -1,0 +1,24 @@
+{
+  "name": "dblAPI.tk",
+  "version": "1.0.0",
+  "description": "Official module of bots-discord.tk",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DivineDiscordBotList/dblAPI.tk"
+  },
+
+  "keywords": [
+    "dbtk",
+    "api",
+    "module"
+  ],
+
+  "author": "DivineDiscordBotList",
+  "license": "Apache-2.0"
+}
