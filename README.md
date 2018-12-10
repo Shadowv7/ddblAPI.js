@@ -1,4 +1,4 @@
-# dblAPI.tk
+# ddblapi.js
 Official module of Divine Discord Bot List
 
 # POST Server Count
