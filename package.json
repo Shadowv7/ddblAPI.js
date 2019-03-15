@@ -1,24 +1,27 @@
 {
-  "name": "ddblapi.js",
+  "name": "ddblAPI.js",
   "version": "0.0.8",
-  "description": "Official module of divinediscordbotlist.com",
+  "description": "Official module of DDBL's API",
   "main": "index.js",
-  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index"
   },
-
   "repository": {
     "type": "git",
-    "url": "https://github.com/DivineDiscordBotList/dblAPI.js"
+    "url": "git+https://github.com/DivineDiscordBotList/ddblAPI.js.git"
   },
-
   "keywords": [
-    "dbtk",
-    "api",
-    "module"
+    "JavaScript",
+    "ddbl",
+    "api"
   ],
-
   "author": "DivineDiscordBotList",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/DivineDiscordBotList/ddblAPI.js/issues"
+  },
+  "homepage": "https://github.com/DivineDiscordBotList/ddblAPI.js#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
