@@ -1,5 +1,5 @@
 {
-  "name": "ddblAPI.js",
+  "name": "ddblapi.js",
   "version": "0.0.9",
   "description": "Official module of DDBL's API",
   "main": "index.js",
