@@ -27,8 +27,8 @@ Using **yarn**
 
 #### Examples:
 ```js
-const ddbl_api = require('ddblapi.js');
-const ddbl = new ddbl_api('BOT_ID', 'API_KEY');
+const { ddblAPI } = require('ddblapi.js');
+const ddbl = new ddblAPI('BOT_ID', 'API_KEY');
 ```
 
 - .postStats()
