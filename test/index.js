@@ -3,7 +3,7 @@ const ddbl = new ddbl_api('BOT_ID', 'API_KEY');
 
 
 /* Example postStats usage */
-ddbl.postStats('BOT_ID')
+ddbl.postStats('SERVER_COUNT')
     .then(console.log);
 
 /* Example getStats usage */
