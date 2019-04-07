@@ -6,57 +6,51 @@
 [![npm version](https://img.shields.io/npm/v/ddblapi.js.svg?maxAge=3600)](https://www.npmjs.com/package/ddblapi.js)
 [![npm downloads](https://img.shields.io/npm/dt/ddblapi.js.svg?maxAge=3600)](https://www.npmjs.com/package/ddblapi.js)
 
-Here's the official module of **Divine Discord Bot List** API.
+Here's the official module of **Divine Discord Bot List** API in JavaScript.
 #### Installation:
 
-*Using NPM*
+Using **npm**
 
 `npm i ddblapi.js`
 
-*Using YARN*
+Using **yarn**
 
 `yarn add ddblapi.js`
 <hr>
 
 #### Methods:
->- .postStats()
->- .getStats()
->- .getVotes()
->- .hasVoted()
+- .postStats()
+- .getStats()
+- .getVotes()
+- .hasVoted()
 <hr>
 
 #### Examples:
+```js
+const ddbl_api = require('ddblapi.js');
+const ddbl = new ddbl_api('BOT_ID', 'API_KEY');
+```
 
 - .postStats()
 ```js
-const DDBL = require("ddblapi.js");
-const ddbl = new DDBL("xxx"); //Replace xxx to your ddbl's token
-
-ddbl.postStats("bot_id", "0"); //Replace "0" to your server_count and "bot_id" to your bot ID
+ddbl.postStats('BOT_ID')
+    .then(console.log);
 ```
 
 - .getStats()
 ```js
-const DDBL = require("ddblapi.js");
-const ddbl = new DDBL();
-
-ddbl.getStats("bot_id").then((res) => console.log(res)); //Replace "bot_id" to your bot ID
+ddbl.getStats('BOT_ID')
+    .then(console.log);
 ```
 
 - .getVotes()
 ```js
-const DDBL = require("ddblapi.js");
-const ddbl = new DDBL();
-
-ddbl.getVotes("bot_id").then((res) => console.log(res)); //Replace "bot_id" to your bot ID
+ddbl.getVotes()
+    .then(console.log);
 ```
 
 - .hasVoted()
 ```js
-const DDBL = require("ddblapi.js");
-const ddbl = new DDBL();
-
-ddbl.hasVoted("bot_id", "user_id").then((voted) => {
-  if(voted) console.log("This user has voted");
-}); //Replace "bot_id" to a bot ID and "user_id" to an user ID
+ddbl.hasVoted24('USER_ID')
+    .then(console.log);
 ```
