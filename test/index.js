@@ -1,5 +1,5 @@
-const ddbl_api = require('../');
-const ddbl = new ddbl_api('BOT_ID', 'API_KEY');
+const { ddblAPI } = require('../');
+const ddbl = new ddblAPI('BOT_ID', 'API_KEY');
 
 /* Example postStats usage */
 ddbl.postStats('SERVER_COUNT')
@@ -16,3 +16,15 @@ ddbl.getVotes()
 /* Example hasVoted24 usage */
 ddbl.hasVoted24('USER_ID')
     .then(console.log);
+
+/* Webhooks usage */
+const { ddblWebhook } = require('../');
+const ddbl = new ddblWebhook('PORT', 'AUTH', 'PATH');
+
+ddbl.on('ready', (hook) => {
+    console.log(hook);
+});
+
+ddbl.on('vote', (vote) => {
+   console.log(vote);
+});
