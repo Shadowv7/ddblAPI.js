@@ -42,7 +42,7 @@ class ddblAPI {
 
     /**
      * Get bot stats of divinediscordbots.com
-     * @param {Snowflake} id The bot ID
+     * @param {Snowflake} bot_id The bot ID
      * @returns {Promise<Object>}
      */
     getStats(bot_id) {
@@ -82,7 +82,7 @@ class ddblAPI {
 
     /**
      * Returns a boolean if an user has voted or not the last 24 hours.
-     * @param {Snowflake} userId The ID of the user
+     * @param {Snowflake} user_id The ID of the user
      * @returns {Promise<boolean>}
      */
     hasVoted24(user_id) {
