@@ -1,7 +1,6 @@
 const ddbl_api = require('../');
 const ddbl = new ddbl_api('BOT_ID', 'API_KEY');
 
-
 /* Example postStats usage */
 ddbl.postStats('SERVER_COUNT')
     .then(console.log);
