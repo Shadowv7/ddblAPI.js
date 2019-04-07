@@ -3,11 +3,11 @@
 const axios = require('axios');
 const baseURL = 'https://divinediscordbots.com/bot';
 
-/**
- * @param {Snowflake} bot_id Your Discord Bot ID
- * @param {string} api_key divinediscordbots.com's token of your bot
- */
 class ddblAPI {
+    /**
+     * @param {Snowflake} bot_id Your Discord Bot ID
+     * @param {string} api_key divinediscordbots.com's token of your bot
+     */
     constructor(bot_id, api_key) {
         // Bot ID
         this.bot_id = bot_id;
