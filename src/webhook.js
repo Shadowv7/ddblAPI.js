@@ -5,7 +5,7 @@ const app = require('express')();
 const bodyparser = require('body-parser');
 
 /**
- * @param {string} port The port where listening the server
+ * @param {number} port The port where listening the server
  * @param {string} auth divinediscordbots.com's token of your bot
  * @param {string} path The path where DDBL will post data
  */
