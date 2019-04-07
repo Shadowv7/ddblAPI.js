@@ -28,8 +28,8 @@ class ddblAPI {
         return new Promise((resolve, reject) => {
             if (!this.api_key) { reject(new Error('[DDBL-MODULE][POST-STATS] API_KEY isn\'t specified on the constructor.')); }
             if (!this.bot_id) { reject(new Error('[DDBL-MODULE][POST-STATS] BOT_ID isn\'t specified on the constructor.')); }
-            if (!server_count) { reject(new Error('[DDBL-MODULE][POST-STATS] serverCount not specified.')); }
-            else if (isNaN(server_count)) { reject(new TypeError('[DDBL-MODULE][POST-STATS] serverCount isn\'t a number.')); }
+            if (!server_count) { reject(new Error('[DDBL-MODULE][POST-STATS] server_count not specified.')); }
+            else if (isNaN(server_count)) { reject(new TypeError('[DDBL-MODULE][POST-STATS] server_count isn\'t a number.')); }
                 this._request('post', { bot_id: this.bot_id, endpoint: 'stats', data: { server_count } })
                     .then(() => {
                         resolve('[DDBL-MODULE][POST-STATS] serverCount posted !');
@@ -47,10 +47,10 @@ class ddblAPI {
      */
     getStats(bot_id) {
         return new Promise((resolve, reject) => {
-            if (!bot_id) { reject(new Error('[DDBL-MODULE][GET-STATS] ID isn\'t specified.')); }
+            if (!bot_id) { reject(new Error('[DDBL-MODULE][GET-STATS] bot_id isn\'t specified.')); }
                 this._request('get', { bot_id: bot_id, endpoint: 'stats' })
                     .then((res) => {
-                        if (!res) { reject(new Error('[DDBL-MODULE][GET-STATS] no bot stats found.')); }
+                        if (!res) { reject(new Error('[DDBL-MODULE][GET-STATS] bot stats not found.')); }
                         resolve(res);
                     })
                     .catch((err) => {
@@ -67,7 +67,7 @@ class ddblAPI {
     getVotes(query_filter) {
         return new Promise((resolve, reject) => {
             let endpoint_filter = '';
-            if (!this.bot_id) { reject('[DDBL-MODULE][POST-STATS] BOT_ID isn\'t specified on the constructor.'); }
+            if (!this.bot_id) { reject('[DDBL-MODULE][POST-STATS] bot_id isn\'t specified on the constructor.'); }
             if (!query_filter) { endpoint_filter = 'votes'; }
             else { endpoint_filter = 'votes?filter=' + query_filter; }
                 this._request('get', { bot_id: this.bot_id, endpoint: endpoint_filter })
@@ -88,10 +88,10 @@ class ddblAPI {
     hasVoted24(user_id) {
         return new Promise((resolve, reject) => {
             if (!this.bot_id) { reject(new Error('[DDBL-MODULE][HAS-VOTED] bot_id ins\'t specified on the constructor.')); }
-            if (!user_id) { reject(new Error('[DDBL-MODULE][HAS-VOTED] userId isn\'t specified.')); }
+            if (!user_id) { reject(new Error('[DDBL-MODULE][HAS-VOTED] user_id isn\'t specified.')); }
                 this.getVotes(this.bot_id, '24')
                     .then((votes) => {
-                        if (!votes || votes.length < 0) { reject(new Error('[DDBL-MODULE][HAS-VOTED] no vote found.')); }
+                        if (!votes || votes.length < 0) { reject(new Error('[DDBL-MODULE][HAS-VOTED] votes not found.')); }
                         resolve(Boolean(votes.find((v) => v.id === user_id)));
                     })
                     .catch((err) => {
