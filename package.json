@@ -1,7 +1,7 @@
 {
   "name": "ddblapi.js",
-  "version": "0.0.9",
-  "description": "Official module of DDBL's API",
+  "version": "1.0.0",
+  "description": "Official module of Divine Discord Bot List in JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "node index"
