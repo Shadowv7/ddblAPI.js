@@ -26,9 +26,12 @@ Using **yarn**
 <hr>
 
 #### Examples:
+
+Methods usage:
 ```js
 const { ddblAPI } = require('ddblapi.js');
 const ddbl = new ddblAPI('BOT_ID', 'API_KEY');
+
 ```
 
 - .postStats()
@@ -53,4 +56,18 @@ ddbl.getVotes()
 ```js
 ddbl.hasVoted24('USER_ID')
     .then(console.log);
+```
+
+Webhooks usage:
+```js
+const { ddblWebhook } = require('ddblapi.js');
+const ddbl = new ddblWebhook('PORT', 'AUTH', 'PATH');
+
+ddbl.on('ready', (hook) => {
+    console.log(hook);
+});
+
+ddbl.on('vote', (vote) => {
+   console.log(vote);
+});
 ```
