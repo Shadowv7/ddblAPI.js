@@ -22,7 +22,7 @@ Using **yarn**
 - .postStats()
 - .getStats()
 - .getVotes()
-- .hasVoted()
+- .hasVoted24()
 <hr>
 
 #### Examples:
@@ -52,7 +52,7 @@ ddbl.getVotes()
     .then(console.log);
 ```
 
-- .hasVoted()
+- .hasVoted24()
 ```js
 ddbl.hasVoted24('USER_ID')
     .then(console.log);
