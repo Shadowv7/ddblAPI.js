@@ -89,7 +89,7 @@ class ddblAPI {
         return new Promise((resolve, reject) => {
             if (!this.bot_id) { reject(new Error('[DDBL-MODULE][HAS-VOTED] bot_id ins\'t specified on the constructor.')); }
             if (!user_id) { reject(new Error('[DDBL-MODULE][HAS-VOTED] user_id isn\'t specified.')); }
-                this.getVotes(this.bot_id, '24')
+                this.getVotes('24')
                     .then((votes) => {
                         if (!votes || votes.length < 0) { reject(new Error('[DDBL-MODULE][HAS-VOTED] votes not found.')); }
                         resolve(Boolean(votes.find((v) => v.id === user_id)));
