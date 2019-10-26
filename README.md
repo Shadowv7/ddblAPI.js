@@ -36,7 +36,7 @@ const ddbl = new ddblAPI('BOT_ID', 'API_KEY');
 
 - .postStats()
 ```js
-ddbl.postStats('BOTID', 'SERVER_COUNT')
+ddbl.postStats('SERVER_COUNT')
     .then(console.log);
 ```
 
