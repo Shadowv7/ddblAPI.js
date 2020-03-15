@@ -24,13 +24,14 @@ class ddblAPI {
      * @param {number} server_count Your bot server count
      * @returns {Promise<String>}
      */
-    postStats(server_count) {
+    postStats(server_count,shard_count = 0;) {
         return new Promise((resolve, reject) => {
             if (!this.api_key) { reject(new Error('[DDBL-MODULE][POST-STATS] API_KEY isn\'t specified on the constructor.')); }
             if (!this.bot_id) { reject(new Error('[DDBL-MODULE][POST-STATS] BOT_ID isn\'t specified on the constructor.')); }
             if (!server_count) { reject(new Error('[DDBL-MODULE][POST-STATS] server_count not specified.')); }
             else if (isNaN(server_count)) { reject(new TypeError('[DDBL-MODULE][POST-STATS] server_count isn\'t a number.')); }
-                this._request('post', { bot_id: this.bot_id, endpoint: 'stats', data: { server_count } })
+            if (isNaN(shard_count)) { reject(new TypeError('[DDBL-MODULE][POST-STATS] shard_count isn\'t a number.')); }
+                this._request('post', { bot_id: this.bot_id, endpoint: 'stats', data: { server_count,shard_count } })
                     .then(() => {
                         resolve('[DDBL-MODULE][POST-STATS] serverCount posted !');
                     })
